@@ -44,7 +44,7 @@ trap
     $serverUrl = "https://$vstsAccount.visualstudio.com"
     $vstsAgentUrl = "$serverUrl/_apis/distributedtask/packages/agent?api-version=2.3"
     $vstsUser = "AzureDevTestLabs"
-    $agentName = $env:COMPUTERNAME + $agentName 
+    $agentName = $env:COMPUTERNAME + "_" + $agentName 
     $retryCount = 3
     $retries = 1
     do
