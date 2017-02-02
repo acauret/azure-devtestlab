@@ -14,11 +14,6 @@
           "displayName": "Active Directory Domain Name",
           "description": "The name of the Active Directory Domain to join (e.g. \"corp.contoso.com\")."
       },
-      "domainOU": {
-          "type": "string",
-          "displayName": "Active Directory Domain OU",
-          "description": "The distinguished name of the Organizational Unit to join (e.g. \"OU=DevTest,DC=corp,DC=contoso,DC=com\")"
-      },
       "domainJoinUser": {
           "type": "string",
           "displayName": "Domain Join User Account",
@@ -43,7 +38,6 @@
     "autoUpgradeMinorVersion": true,
     "settings": {
           "Name": "[parameters('domainName')]",
-          "OUPath": "[parameters('domainOU')]",
           "User": "[parameters('domainJoinUser')]",
           "Restart": "true",
           "Options": "[parameters('domainJoinOptions')]"
